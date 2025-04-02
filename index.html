@@ -1,29 +1,43 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Intro to AJAX Practice Tasks</title>
-    <script src="src/index.js" charset="utf-8"></script>
-  </head>
-  <body>
-    <h1>Dog CEO</h1>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dog Breeds</title>
+  <style>
+    #dog-images img {
+      margin: 10px;
+      height: 200px;
+      width: auto;
+    }
+    #breed-list li {
+      cursor: pointer;
+      padding: 5px;
+      font-size: 18px;
+    }
+    #breed-list li.selected {
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <h1>Dog Breeds and Images</h1>
 
-    <div id="dog-image-container">
-      <!-- images here -->
-    </div>
+  <!-- Dropdown for filtering breeds -->
+  <select id="breed-filter">
+    <option value="">Filter by Letter</option>
+    <option value="a">A</option>
+    <option value="b">B</option>
+    <option value="c">C</option>
+    <option value="d">D</option>
+  </select>
 
-    <hr>
-    <label for="select-breed">Filter Breeds That Start with:</label>
-    <select id="breed-dropdown" name="select-breed">
-      <option value="a">a</option>
-      <option value="b">b</option>
-      <option value="c">c</option>
-      <option value="d">d</option>
-    </select>
+  <!-- Dog images container -->
+  <div id="dog-images"></div>
 
-    <ul id="dog-breeds">
+  <!-- Breeds list container -->
+  <ul id="breed-list"></ul>
 
-    </ul>
-
-  </body>
+  <script src="index.js"></script>
+</body>
 </html>
